@@ -1,0 +1,1 @@
+This is for educational purpose only.  It exposes a vulnerability that allows users to download videos on YouTube.  To test the code, simply copy and paste the video url into the input box.  In order to test this with protected videos that require a login to watch, you will need to fill out the authentication cookie.

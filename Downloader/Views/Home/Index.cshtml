@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Downloader";
+}
+
+<style>
+    [class*="col-lg-"] {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    body {
+        /*padding-top: 200px;*/
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    #download {
+        padding: 10px;
+    }
+
+    @@media (max-width: 767px) {
+        #download button {
+            width: 100%;
+        }
+    }
+</style>
+
+<div class="container">
+    <form id="download" method="get" action="@Url.Action("Download", "Home")">
+        <div class="row">
+            <div class="col col-lg-10">
+                <input name="sourceUrl" type="text" autofocus>
+            </div>
+            <div class="col col-lg-2">
+                <button class="btn btn-primary" type="submit">Download</button>
+            </div>
+        </div>
+        <img id="ajax-loader" src="~/Content/images/ajax-loader.gif" style="display: none" />
+    </form>
+
+    <div id="downloadResults" />
+</div>

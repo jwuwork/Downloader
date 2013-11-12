@@ -1,0 +1,8 @@
+﻿@model IEnumerable<Downloader.Services.DownloadDetail>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li><a href="@item.Url" download="@item.Name">@item.Name</a></li>
+    }
+</ul>
